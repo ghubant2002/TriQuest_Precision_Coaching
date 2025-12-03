@@ -1,0 +1,282 @@
+/* Footer CSS */
+
+.wb_foot_con
+{
+    background-color: #000;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.wb_fbox
+{
+    text-align: left;
+}
+
+.wb_logo_img2
+{
+    width: 20px;
+    height: 20px;
+}
+
+.wb_foot_logo
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wb_foot_flex
+{
+    gap: 6px;
+    text-decoration: none;
+    justify-content: left;
+}
+
+.wb_foot_para
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #999;
+    padding-right: 3rem;
+}
+
+.wb_foot_flex2
+{
+    gap: 16px;
+    justify-content: left;
+}
+
+.wb_footer_list
+{
+    list-style: none;
+    line-height: 2.7;
+}
+
+.wb_foot_item
+{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ffffff00;
+    transition: all 0.4s ease;
+}
+
+.wb_foot_item:hover
+{
+    border-bottom: 1px solid #ffffff;
+}
+
+.wb_foot_head
+{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.wb_copyright
+{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.wb_box_border3
+{
+    border-top: 1px solid #fff;
+}
+
+/* Responsive Design for Desktop */
+
+@media screen and (max-width: 1140px) and (min-width: 992px)
+{
+    .wb_foot_con
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 3.8rem;
+        padding-right: 3.8rem;
+    }
+
+    .wb_foot_para
+    {
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .wb_foot_item
+    {
+        font-size: 15px;
+    }
+
+    .wb_copyright
+    {
+        font-size: 15px;
+    }
+}
+
+/* Responsive Design for Tab */
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+    .wb_foot_con
+    {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+        padding-left: 3.8rem;
+        padding-right: 3.8rem;
+    }
+
+    .wb_foot_flex
+    {
+        justify-content: center;
+    }
+
+    .wb_foot_flex2
+    {
+        justify-content: center;
+    }
+
+    .wb_logo_img2
+    {
+        width: 24px;
+        height: 24px;
+    }
+
+    .wb_foot_logo
+    {
+        font-size: 26px;
+    }
+
+    .wb_foot_para
+    {
+        padding-right: 0;
+        font-size: 18px;
+    }
+
+    .wb_foot_item
+    {
+        font-size: 18px;
+    }
+
+    .wb_copyright
+    {
+        font-size: 18px;
+    }
+
+    .wb_res_flex2
+    {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        text-align: center;
+    }
+
+    .wb_fbox
+    {
+        text-align: center;
+        padding-left: 0 !important;
+        padding-top: 1rem;
+    }
+
+    .wb_foot_soc
+    {
+        font-size: 24px !important;
+    }
+
+    .wb_footer_list
+    {
+        padding-left: 0 !important;
+    }
+
+    .wb_foot_head
+    {
+        font-size: 20px;
+    }
+}
+
+/* Responsive Design for Smartphone */
+
+@media screen and (max-width: 767px) and (min-width: 360px)
+{
+    .wb_foot_con
+    {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+
+    .wb_foot_flex
+    {
+        justify-content: center;
+    }
+
+    .wb_foot_flex2
+    {
+        justify-content: center;
+    }
+
+    .wb_logo_img2
+    {
+        width: 24px;
+        height: 24px;
+    }
+
+    .wb_foot_logo
+    {
+        font-size: 26px;
+    }
+
+    .wb_foot_para
+    {
+        padding-right: 0;
+        font-size: 15px;
+    }
+
+    .wb_foot_item
+    {
+        font-size: 15px;
+    }
+
+    .wb_copyright
+    {
+        font-size: 15px;
+    }
+
+    .wb_res_flex2
+    {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        text-align: center;
+    }
+
+    .wb_fbox
+    {
+        text-align: center;
+        padding-left: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .wb_foot_soc
+    {
+        font-size: 24px !important;
+    }
+
+    .wb_footer_list
+    {
+        padding-left: 0 !important;
+    }
+
+    .wb_foot_head
+    {
+        font-size: 20px;
+    }
+
+    .wb_box_border3
+    {
+        margin-top: 0 !important;
+    }
+}

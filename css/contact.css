@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+html,body
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: "Manrope", sans-serif !important;
+}
+
+*{box-sizing: border-box;}
+
+
+/* Body Section 1 */
+
+.wb_con_bg3
+{
+    background-color: #000;
+    height: 105vh;
+    padding-left: 2.5rem;
+    padding-right: 3rem;
+    /* padding-top: 8rem; */
+}
+
+.con_avatar
+{
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50% !important;
+}
+
+.tri_head_txt6
+{
+    font-size: 72px;
+    font-weight: 500;
+    color: #f5f5f5;
+    letter-spacing: -1.5px;
+}
+
+.tri_text_para4
+{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #f5f5f5;
+}
+
+.tri_text_para5
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #f5f5f5;
+}
+
+.wb_text_dec
+{
+    text-decoration: none;
+}
+
+.wb_text_dec:hover
+{
+    text-decoration: underline 1px solid #f5f5f5;
+}
+
+.wb_box_border4
+{
+    border-bottom: 1px solid #555;
+}
+
+.wb_flex_gap3
+{
+    gap: 10px;
+}
+
+.wb_icon3
+{
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+.wb_box_specs
+{
+    background: linear-gradient(rgba(46, 46, 46, 0.4) 0%, rgba(46, 46, 46, 0.5) 100%);
+    border-radius: 14px !important;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    padding: 2.5rem 2rem;
+}
+
+.wb_col_pad3
+{
+    padding-top: 3rem;
+}
+
+.wb_form_label
+{
+    color: #f5f5f5 !important;
+}
+
+.wb_form_input
+{
+    background-color: #2e2e2e80 !important;
+    border: 1px solid #2e2e2e80 !important;
+    border-radius: 8px !important;
+    color: #f5f5f5 !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    width: 96% !important;
+    outline: none !important;
+}
+
+.wb_form_input:focus
+{
+    border: 1px solid #f5f5f5 !important;
+    box-shadow: none !important;
+}
+
+.form-select:focus
+{
+    border: 1px solid #f5f5f5 !important;
+    box-shadow: none !important;
+}
+
+.wb_form_input2
+{
+    background-color: #2e2e2e80 !important;
+    border: 1px solid #2e2e2e80 !important;
+    border-radius: 8px !important;
+    color: #f5f5f5 !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    width: 100% !important;
+}
+
+.wb_sub_btn
+{
+    color: #000;
+    background-color: #fff;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.wb_btn_spec
+{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #000;
+    padding: 9px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.wb_icon
+{
+    transform: rotate(45deg);
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.wb_sub_btn:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+
+.wb_sub_btn:hover .wb_btn_spec
+{
+    background-color: #fff;
+}
+
+.wb_sub_btn:hover .wb_icon
+{
+    transform: rotate(90deg);
+    color: #000;
+}
+
+/* Media Query */
+
+/* Responsive Design for Desktop */
+
+@media screen and (max-width: 1140px) and (min-width: 992px)
+{
+    .wb_con_bg3
+    {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .tri_head_txt6
+    {
+        font-size: 60px;
+    }
+
+    .wb_box_specs
+    {
+        margin-left: 0;
+        margin-top: 2.8rem;
+        padding: 1.8rem;
+    }
+
+    .wb_col_pad3
+    {
+        padding-top: 1rem;
+    }
+}
+
+/* Responsive Design for Tab */
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+    .wb_con_bg3
+    {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .tri_head_txt6
+    {
+        font-size: 50px;
+    }
+
+    .wb_box_specs
+    {
+        margin-left: 0;
+        margin-top: 2.2rem;
+        padding: 1.8rem;
+    }
+
+    .wb_col_pad3
+    {
+        padding-top: 1rem;
+    }
+}
+
+/* Responsive Design for Smartphone */
+
+@media screen and (max-width: 767px) and (min-width: 360px)
+{
+    .wb_con_bg3
+    {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 4.5rem !important;
+        height: auto;
+        text-align: center;
+    }
+
+    .wb_box_border4
+    {
+        margin: 0 auto;
+    }
+
+    .wb_contact_flex
+    {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .tri_head_txt6
+    {
+        font-size: 36px;
+    }
+
+    .tri_text_para4
+    {
+        font-size: 17px;
+    }
+
+    .tri_text_para5
+    {
+        font-size: 17px;
+    }
+
+    .wb_flex_gap3
+    {
+        justify-content: center !important;
+        padding-top: 1rem !important;
+    }
+
+    .wb_form_flex
+    {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .wb_form_input
+    {
+        width: 100% !important;
+    }
+
+    .wb_mar
+    {
+        margin-left: 0 !important;
+    }
+
+    .wb_sub_btn
+    {
+        margin-top: 0.4rem;
+    }
+
+    .wb_box_specs
+    {
+        margin-left: 0;
+        margin-top: 2.2rem;
+        padding: 1.8rem;
+    }
+
+    .wb_col_pad3
+    {
+        padding-top: 1rem;
+    }
+}

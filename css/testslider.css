@@ -1,0 +1,172 @@
+/* General Reset and Body Styling to center the component */
+        /* * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } */
+
+
+        /* Main Container */
+        .testimonial-container {
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+            margin-top: 3rem;
+            height: 500px;
+        }
+
+        /* Content Wrapper (Stars, Text, Author) - This part animates */
+        .testimonial-content {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            min-height: 200px; /* Prevents layout jump during transition */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .test_text
+        {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgb(85,85,85);
+        }
+
+        /* Fade out class for JS to toggle */
+        .testimonial-content.fade-out {
+            opacity: 0;
+        }
+
+        /* Star Ratings */
+        .stars {
+            color: #fbbf24; /* Gold color */
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            gap: 5px;
+        }
+
+        /* Main Testimonial Text */
+        .quote-text {
+            font-size: 32px;
+            line-height: 1.3;
+            font-weight: 500;
+            color: #111;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        /* Author Details */
+        .author-meta {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .author-title {
+            font-weight: 400;
+            color: #666;
+        }
+
+        /* Avatar Navigation */
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.5; /* Dim inactive avatars */
+            filter: grayscale(100%); /* Make inactive avatars black & white */
+            border: 3px solid transparent;
+        }
+
+        .avatar:hover {
+            opacity: 0.8;
+        }
+
+        /* Active Avatar Styling */
+        .avatar.active {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+            border-color: #fbbf24; /* Optional ring color */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .quote-text {
+                font-size: 1.2rem;
+            }
+        }
+
+/* Media Query */
+
+/* Responsive Design for Desktop */
+
+@media screen and (max-width: 1140px) and (min-width: 992px)
+{
+    .quote-text
+    {
+        font-size: 28px;
+    }
+
+    .testimonial-container
+    {
+        max-width: 800px;
+        height: 450px;
+    }
+}
+
+/* Responsive Design for Tab */
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+    .testimonial-container
+    {
+        max-width: 720px;
+        margin-top: 1rem;
+        height: 420px;
+    }
+
+    .quote-text
+    {
+        font-size: 25px;
+    }
+}
+
+/* Responsive Design for Smartphone */
+
+@media screen and (max-width: 767px) and (min-width: 360px)
+{
+    .testimonial-container
+    {
+        max-width: 720px;
+        margin-top: 0 !important;
+        height: 420px;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+        margin-bottom: 5.5rem;
+    }
+
+    .quote-text
+    {
+        font-size: 20px;
+    }
+}

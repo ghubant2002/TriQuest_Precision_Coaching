@@ -1,0 +1,1036 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+html,body
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: "Manrope", sans-serif;
+}
+
+*{box-sizing: border-box;}
+
+
+/* Banner Section  */
+
+.wb_banner_bg
+{
+    /* background-image: url(../images/banner_cover.webp); */
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+}
+
+/* 2. The Animated Image Layer */
+.wb_banner_bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Your Image */
+    background-image: url(../images/banner_cover.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* The Zoom Animation: 20s duration, moving back and forth */
+    animation: zoomEffect 1.4s linear forwards;
+    
+    /* Ensures this background stays behind any content you might mistakenly put inside this div */
+    z-index: 0; 
+}
+
+/* 3. The Animation Keyframes */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1.05);
+        opacity: 0.05;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.ban_cov
+{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(33% 42% at 69% 59.4%, #0000 0%, #00000059 100%);
+}
+
+.tri_bantext
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    /* z-index: 9999; */
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tri_line
+{
+    position: relative;
+    color: #ffffffe0;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+.tri_line::before
+{
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: -12px;
+    width: 48px;
+    height: 1.5px;
+    background: #ffffff7b;
+}
+
+.ban_head
+{
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.170;
+}
+
+/* 2. The Animation Setup */
+
+/* The style for EACH LETTER */
+.char {
+    display: inline-block;
+    opacity: 0;
+    
+    /* INITIAL STATE: 
+       1. Pushed down 30px
+       2. Zoomed in (1.5x size)
+    */
+    transform: translateY(30px) scale(1.5);
+    
+    /* Blurry start */
+    filter: blur(10px);
+    
+    /* Smooth transition for all properties */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, filter 0.6s ease-out;
+    
+    /* Prevent letters from collapsing */
+    white-space: pre;
+    
+    /* Optimization for smoother rendering */
+    will-change: transform, opacity, filter;
+}
+
+/* The Active State (Animation End) */
+.char.visible {
+    opacity: 1;
+    
+    /* END STATE: 
+       1. Original position (0)
+       2. Original size (1)
+    */
+    transform: translateY(0) scale(1);
+    
+    /* Clear focus */
+    filter: blur(0);
+}
+
+/* The 'End' State */
+.char.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);             /* Blur clears up */
+}
+
+.ban_para
+{
+    color: #ffffffe0;
+    width: 35rem;
+    font-size: 16px;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+}
+
+.wb_ban_btn
+{
+    color: #000;
+    background-color: #fff;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 9.8rem;
+    position: relative;
+    text-align: left;
+    transition: all 0.4s ease;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 2.4s;
+    opacity: 0;
+}
+
+.wb_btn_spec
+{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #000;
+    padding: 9px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.wb_icon
+{
+    transform: rotate(45deg);
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.wb_ban_btn:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+
+.wb_ban_btn:hover .wb_btn_spec
+{
+    background-color: #fff;
+}
+
+.wb_ban_btn:hover .wb_icon
+{
+    transform: rotate(90deg);
+    color: #000;
+}
+
+.wb_box_border
+{
+    border-left: 2px solid #ffffff7b;
+    margin-top: 3.6rem;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+.wb_flex_gap
+{
+    gap: 5px;
+}
+
+.rate_txt
+{
+    color: #ffffffe0;
+}
+
+/* After Banner Section 1 */
+
+.wb_con_pad
+{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.tri_head_txt1
+{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.wb_flex_specs
+{
+    align-items: center;
+    gap: 6rem;
+    padding: 5rem 4rem;
+}
+
+.wb_img
+{
+    height: 260px !important;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.wb_flex_specs2
+{
+    align-items: center;
+    gap: 4rem;
+    padding-left: 13.5rem;
+    padding-right: 13.5rem;
+}
+
+.wb_box_border2
+{
+    border-top: 2px solid #e1e1e1;
+    padding-top: 1.5rem;
+}
+
+.flex_col_head
+{
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.flex_col_para
+{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.counter-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+
+}
+
+.counter-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+
+}
+
+/* After Banner Section 2 */
+
+.wb_col_pad
+{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.wb_con_pad2
+{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.tri_head_txt2
+{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.img_rad
+{
+    border-radius: 14px;
+}
+
+.wb_box_shadow
+{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 32px 0px;
+    border-radius: 24px;
+}
+
+.wb_box_padding
+{
+    padding-left: 3.5rem;
+}
+
+.wb_price_tag
+{
+    color: #999999;
+}
+
+.wb_text_head
+{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.wb_text_para
+{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.wb_flex_gap2
+{
+    gap: 12px;
+}
+
+.wb_box_btn
+{
+    color: #fff;
+    background-color: #000;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 11.2rem;
+    position: relative;
+    text-align: left;
+    margin-top: 3rem;
+    transition: all 0.4s ease;
+}
+
+.wb_btn_spec2
+{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 9px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.wb_icon2
+{
+    transform: rotate(45deg);
+    font-size: 17px;
+    color: #000;
+    transition: all 0.4s ease;
+}
+
+.wb_box_btn:hover
+{
+    background-color: #424242;
+    color: #fff;
+}
+
+.wb_box_btn:hover .wb_btn_spec2
+{
+    background-color: #fff;
+}
+
+.wb_box_btn:hover .wb_icon2
+{
+    color: #424242;
+    transform: rotate(90deg);
+}
+
+/* After Banner Section 4 */
+
+.wb_con_bg
+{
+    background-color: #1b1b1b;
+    margin-top: 3rem;
+}
+
+.wb_col_pad2
+{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.tri_head_txt3
+{
+    font-size: 50px;
+    font-weight: 500;
+    color: #f5f5f5;
+}
+
+.tri_text_para
+{
+    color: #fffc;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tri_head_txt4
+{
+    color: #f5f5f5;
+    font-size: 1.8rem;
+}
+
+.wb_box_specs
+{
+    border: 1px solid #3e3a3a;
+    border-radius: 20px;
+}
+
+.tri_text_para2
+{
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+.wb_check
+{
+    color: #f5f5f5;
+}
+
+.wb_text_para2
+{
+    font-size: 16px;
+    color: #f5f5f5;
+}
+
+.wb_img2
+{
+    border-radius: 14px;
+}
+
+.wb_col_box
+{
+    border-radius: 10px;
+    border: 1px solid #3e3a3a;
+}
+
+/* Media Query */
+
+/* Responsive Design for Desktop */
+
+@media screen and (max-width: 1140px) and (min-width: 992px)
+{
+    /* Banner Section  */
+
+    .tri_bantext
+    {
+        padding-top: 9rem;
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+    }
+
+    .ban_head
+    {
+        font-size: 62px;
+    }
+
+    .wb_box_border
+    {
+        margin-top: 3rem;
+    }
+
+    /* After Banner Section 1 */
+
+    .wb_flex_specs
+    {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .tri_head_txt1
+    {
+        font-size: 27px;
+    }
+
+    .wb_flex_specs2
+    {
+        padding-left: 7rem;
+        padding-right: 7rem;
+        gap: 3rem;
+    }
+
+    .flex_col_head
+    {
+        font-size: 35px;
+    }
+
+    /* After Banner Section 2 */
+
+    .wb_con_pad2
+    {
+        padding-bottom: 0;
+    }
+
+    .wb_col_pad
+    {
+        padding-top: 0;
+    }
+
+    .tri_head_txt2
+    {
+        font-size: 40px;
+    }
+
+    .wb_text_head
+    {
+        font-size: 28px;
+    }
+
+    .wb_box_btn
+    {
+        margin-top: 2rem;
+    }
+
+    .wb_con_pad
+    {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .wb_box_padding
+    {
+        padding-left: 3rem;
+    }
+
+    /* After Banner Section 4 */
+
+    .wb_con_bg
+    {
+        margin-top: 4.5rem;
+    }
+
+    .tri_head_txt3
+    {
+        font-size: 40px;
+    }
+
+    .wb_col_pad2
+    {
+        padding: 1rem;
+    }
+
+    .tri_text_para
+    {
+        margin-bottom: 3rem;
+    }
+
+    .wb_img2
+    {
+        height: 450px;
+        object-fit: cover;
+    }
+
+    .tri_head_txt4
+    {
+        font-size: 1.6rem;
+    }
+}
+
+/* Responsive Design for Tab */
+
+@media screen and (max-width: 991px) and (min-width: 768px)
+{
+    /* Banner Section  */
+
+    .tri_bantext
+    {
+        padding-top: 9rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .ban_head
+    {
+        font-size: 52px;
+    }
+
+    .wb_box_border
+    {
+        margin-top: 3rem;
+    }
+
+    /* .wb_banner_bg
+    {
+        background-position: center;
+    } */
+
+    .wb_banner_bg::before
+    {
+        background-position: center;
+    }
+
+    /* After Banner Section 1 */
+
+    .wb_flex_specs
+    {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        justify-content: space-between !important;
+        gap: 3rem;
+    }
+
+    .tri_head_txt1
+    {
+        font-size: 23px;
+        line-height: 1.3;
+    }
+
+    .wb_flex_specs2
+    {
+        padding-left: 0;
+        padding-right: 7.6rem;
+        justify-content: space-between !important;
+        gap: 2.5rem;
+    }
+
+    .wb_con_pad
+    {
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+    }
+
+    .flex_col_head
+    {
+        font-size: 24px;
+    }
+
+    .flex_col_para
+    {
+        font-size: 14px;
+    }
+
+    .wb_box_border2
+    {
+        padding-top: 1rem;
+    }
+
+    /* After Banner Section 2 */
+
+    .wb_col_pad
+    {
+        padding-top: 0;
+    }
+
+    .tri_head_txt2
+    {
+        font-size: 35px;
+    }
+
+    .wb_text_head
+    {
+        font-size: 25px;
+    }
+
+    .wb_box_btn
+    {
+        margin-top: 2rem;
+    }
+
+    .wb_box_padding
+    {
+        padding-left: 2.3rem;
+    }
+
+    .wb_con_pad2
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+    }
+
+    .img_rad 
+    {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    /* After Banner Section 4 */
+
+    .wb_con_bg
+    {
+        margin-top: 5rem;
+    }
+
+    .tri_head_txt3
+    {
+        font-size: 35px;
+    }
+
+    .wb_col_pad2
+    {
+        padding: 0;
+    }
+
+    .tri_text_para
+    {
+        margin-bottom: 3rem;
+        font-size: 1rem;
+    }
+
+    .wb_img2
+    {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .tri_head_txt4
+    {
+        font-size: 1.6rem;
+    }
+
+    .wb_res_flex
+    {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+    }
+}
+
+/* Responsive Design for Smartphone */
+
+@media screen and (max-width: 767px) and (min-width: 360px)
+{
+    /* Banner Section  */
+
+    .tri_bantext
+    {
+        padding-top: 8rem;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+    }
+
+    .ban_head
+    {
+        font-size: 36px;
+    }
+
+    .ban_para
+    {
+        width: auto;
+        font-size: 17px;
+    }
+
+    .wb_box_border
+    {
+        margin-top: 3rem;
+    }
+
+    .wb_banner_bg
+    {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .wb_banner_bg::before
+    {
+        background-position: left;
+    }
+
+    .tri_line
+    {
+        font-size: 17px;
+    }
+
+    .rate_txt
+    {
+        font-size: 17px;
+    }
+
+    /* After Banner Section 1 */
+
+    .wb_flex_specs
+    {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+        justify-content: space-between !important;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .tri_head_txt1
+    {
+        font-size: 23px;
+        line-height: 1.3;
+        text-align: center !important;
+        padding: 0 12px;
+    }
+
+    .wb_flex_specs2
+    {
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-between !important;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .wb_con_pad
+    {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .flex_col_head
+    {
+        font-size: 30px;
+    }
+
+    .flex_col_para
+    {
+        font-size: 14px;
+    }
+
+    .wb_box_border2
+    {
+        padding-top: 1rem;
+        width: 44% !important;
+    }
+
+    /* After Banner Section 2 */
+
+    .wb_col_pad
+    {
+        padding-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    .tri_head_txt2
+    {
+        font-size: 24px;
+    }
+
+    .wb_text_head
+    {
+        font-size: 22px;
+    }
+
+    .wb_box_btn
+    {
+        margin-top: 2rem;
+    }
+
+    .wb_box_padding
+    {
+        padding-left: 0;
+
+    }
+
+    .wb_con_pad2
+    {
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .img_rad 
+    {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .wb_ph_flex
+    {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .wb_box_flex
+    {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .wb_price_tag
+    {
+        margin-bottom: 0;
+    }
+
+    .wb_text_para
+    {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .wb_ph_tick
+    {
+        font-size: 14px;
+    }
+
+    .wb_sm_box
+    {
+        text-align: center;
+        padding-bottom: 0.1rem;
+    }
+
+    /* After Banner Section 4 */
+
+    .wb_con_bg
+    {
+        margin-top: 6.5rem;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .tri_head_txt3
+    {
+        font-size: 24px;
+    }
+
+    .wb_col_pad2
+    {
+        padding: 0;
+    }
+
+    .tri_text_para
+    {
+        margin-bottom: 3rem;
+        font-size: 14px;
+    }
+
+    .wb_img2
+    {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .tri_head_txt4
+    {
+        font-size: 20px;
+    }
+
+    .tri_text_para2
+    {
+        font-size: 14px;
+    }
+
+    .wb_text_para2
+    {
+        font-size: 14px;
+    }
+
+    .wb_check
+    {
+        font-size: 14px;
+    }
+
+    .wb_box_specs
+    {
+        padding: 1rem !important;
+    }
+    
+    .wb_res_flex
+    {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+    }
+}

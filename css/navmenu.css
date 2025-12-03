@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+body
+{
+  font-family: "Manrope", sans-serif; 
+  font-weight: 500;
+}
+
+/* Unique Navbar Styles */
+    .myNav-container {
+      width: 100%;
+      background: #fff;
+      color: #000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1050;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .myNav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 3rem;
+      max-width: 1300px;
+      margin: auto;
+      /* gap: 9rem; */
+    }
+
+    .myNav-logo {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #000;
+      text-decoration: none;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wb_logo_img
+    {
+      width: 20px;
+      height: 20px;
+    }
+
+    .myNav-links {
+      display: flex;
+      align-items: center;
+      /* gap: 1.5rem; */
+    }
+
+    .myNav-links a {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000;
+      padding: 0.4rem 1rem;
+      border-bottom: 1px solid #00000000;
+      transition: all 0.4s ease-in-out !important;
+    }
+
+    .myNav-links a:hover {
+      border-bottom: 1px solid #000;
+    }
+
+    .wb_call_btn
+    {
+      font-family: "Manrope", sans-serif !important;
+      color: #fff !important;
+      background-color: #000;
+      /* border-radius: 6px; */
+      border-radius: 30px;
+      /* padding: .75rem 1.25rem; */
+      padding: 14px 26px !important;
+      /* margin-left: 1.4rem; */
+      margin-left: 15rem;
+      font-weight: 500 !important;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+
+    .wb_call_btn:hover 
+    {
+      background-color: #424242;
+    }
+
+    /* Hamburger Menu */
+    .myNav-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .myNav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #000;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    /* Animate hamburger into X */
+    .myNav-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .myNav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .myNav-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 991px) {
+      .myNav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: #f5f5f5;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        /* padding: 1rem 0; */
+        padding-top: 5rem;
+      }
+
+      .myNav-links a {
+        font-size: 20px;
+        margin-top: 0.8rem;
+      }
+
+      .myNav-inner {
+        justify-content: space-between;
+        padding: 1.1rem 2.4rem;
+      }
+
+      .wb_call_btn {
+        font-size: 20px;
+        margin-top: 1.5rem !important;
+        margin-left: 0;
+        width: 14rem;
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+        border-radius: 40px;
+      }
+
+      .myNav-links.active {
+        display: flex;
+        border-top: 1px solid #000;
+      }
+
+      .myNav-toggle {
+        display: flex;
+      }
+    }
+
+    /* Responsive Design for Desktop */
+
+    @media screen and (max-width: 1140px) and (min-width: 992px)
+    {
+      .wb_call_btn
+      {
+        padding: 14px 22px !important;
+        margin-left: 5.4rem;
+      }
+
+      .myNav-links a
+      {
+        font-size: 15px;
+      }
+
+      .myNav-inner
+      {
+        max-width: 1000px;
+      }
+    }
+
+    /* Responsive Design for Smartphone */
+
+    @media screen and (max-width: 767px) and (min-width: 360px)
+    {
+      .myNav-inner {
+        justify-content: space-between;
+        padding: 1.1rem 1.8rem;
+      }
+    }
+
+    
+
